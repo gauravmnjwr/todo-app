@@ -1,0 +1,35 @@
+body{
+  background-color: #5CDB95;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  color: #05386B;
+  font-family: sans-serif;
+}
+form input{
+  height: 50px;
+  background-color: #EDF5E1;
+  
+  border: 1px solid #05386B;
+
+}
+form button{
+  background-color: tomato;
+  border: 1px solid white;
+  height: 50px;
+  width: 100px;
+  background-color: #379683;
+}
+li{
+  border: 1px solid wheat;
+  /* list-style: none; */
+}
+select{
+  height: 50px;
+  background-color: blanchedalmond;
+}
+ul li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

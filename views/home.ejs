@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/home.css">
+  <title>Document</title>
+</head>
+<body>
+  <u><h1>TODO LIST APP</h1></u>
+  <form action="/create-todo" method="post">
+    <input type="text" name="description" id="" placeholder="Description" required>
+    <input type="date" name="date" id="" required>
+    <select name="category">
+      <option value="NULL">
+        Select Category
+      </option>
+      <option value="Personal">
+        Personal
+      </option>
+      <option value="Work">
+       Work
+      </option>
+      <option value="SCHOOL">
+        School
+      </option>
+      <option value="Shopping">
+        Shopping
+      </option>
+      <option value="Birthday">
+        Birthday
+      </option>
+    </select>
+    <button type="submit"> SUBMIT </button>
+    <a href="/delete-todo/"></a>
+  </form>
+  <ul>
+    <%for(let i of TodoApp){%>
+    <li>
+      <input type="checkbox" name="flag" id="">
+      <p><%=i.description%></p>
+      <p><%=i.date%></p>
+      <p><%=i.category%></p>
+    </li>
+    <%}%>
+  </ul>
+</body>
+</html>
