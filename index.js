@@ -1,4 +1,5 @@
 const express= require('express');
+const mongoose= require('mongoose')
 
 const port= 8000;
 const db=require('./config/mongoose');
@@ -23,18 +24,17 @@ app.post('/create-todo',function(req,res){
   TodoApp.create({
     description:req.body.description,
     date:req.body.date,
-    category:req.body.category
+    category:req.body.category,
   },function(err,newTodo){
     if(err){
+      console.log(req.body.check)
       console.log("Error Creating a contact");
       return;
     }
-    console.log('**********',newTodo)
+    // console.log('**********',newTodo)
     return res.redirect('back');
   })
 })
-
-
 
 
 //Port Listen Config
@@ -45,4 +45,4 @@ app.listen(port,function(err){
     return;
   }
   console.log("Running Succsesfully On PORT",port);
-})
+});

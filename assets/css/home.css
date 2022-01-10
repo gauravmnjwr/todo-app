@@ -14,15 +14,19 @@ form input{
 
 }
 form button{
-  background-color: tomato;
   border: 1px solid white;
   height: 50px;
-  width: 100px;
+  width: 110px;
   background-color: #379683;
+  
+
+  
 }
+
 li{
   border: 1px solid wheat;
   /* list-style: none; */
+  position: relative;
 }
 select{
   height: 50px;
@@ -32,4 +36,51 @@ ul li{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  border: 2px solid #05386B;
+  margin: 1px 0px 1px 0px ;
+}
+#deletebutton{
+  border: 1px solid white;
+  height: 50px;
+  width: 110px;
+  background-color: #c73f00;
+}
+ul{
+  margin-right: 25px;
+}
+.mycheckbox{
+  height: 15px;
+  margin-top: 20px;
+}
+#checkboxdiv{
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 10px;
+}
+li p{
+  border: 1px solid black;
+ text-align: center;
+  padding: 10px;
+  
+}
+#cat{
+  position: absolute;
+  right: 30px;
+}
+#date{
+  position: absolute;
+  right: 40%;
+}
+#desc{
+  /* position: absolute; */
+  margin-right: 300px;
+}
+
+li{
+  
+}
+
+.mycheckbox:checked + li p{
+  text-decoration: line-through;
+
 }

@@ -11,3 +11,20 @@ module.exports.home=function(req,res){
     });
   });
 }
+let arr = new Set();
+module.exports.getid=function (req, res) {
+  var id= req.query.id; 
+  arr.add(id);
+  // res.redirect("/");
+  // return;
+}
+module.exports.remove = function(req, res){ 
+  for(let i of arr){
+    TodoApp.findByIdAndDelete(i,function(err){
+      return;
+    })
+    
+  }
+  arr.clear();
+  return res.redirect('back');
+}

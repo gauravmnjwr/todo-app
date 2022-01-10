@@ -33,17 +33,24 @@
       </option>
     </select>
     <button type="submit"> SUBMIT </button>
-    <a href="/delete-todo/"></a>
+    
+    <ul>
+      <%for(let i of TodoApp){%>
+      <li>
+        <div id="checkboxdiv">
+            <input type="checkbox" class="mycheckbox" onchange="window.location.href='/getid/?id=<%= i._id %>'" name="checkbox">
+        </div>
+        <p id="desc"><%=i.description%></p>
+        <p id="date"><%=i.date%></p>
+        <p id="cat"><%=i.category%></p>
+      </li>
+      <%}%>
+    </ul>
   </form>
-  <ul>
-    <%for(let i of TodoApp){%>
-    <li>
-      <input type="checkbox" name="flag" id="">
-      <p><%=i.description%></p>
-      <p><%=i.date%></p>
-      <p><%=i.category%></p>
-    </li>
-    <%}%>
-  </ul>
+  <a href="delete/" > <Button id="deletebutton" >
+    DELETE TASKS
+  </Button></a>
+  
+  <script src="/js/home.js"></script>
 </body>
 </html>

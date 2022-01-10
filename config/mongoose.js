@@ -14,6 +14,7 @@ db.on('error',console.error.bind(console,'Error Connecting to db'));
 
 //DB up and running
 
+
 db.once('open',function(){
   console.log("Successfully connected to DB");
 })
